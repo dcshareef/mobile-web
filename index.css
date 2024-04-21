@@ -1,0 +1,635 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Sofia&family=Syne:wght@400..800&family=Yellowtail&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Navbar */
+header {
+    height: 90px;
+    width: 100%;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 90px;
+    width: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+header nav .logo {
+    color: #000000;
+    font-family: "Bruno Ace", sans-serif;
+    margin-left: 60px;
+}
+header nav .navMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+}
+header nav ul {
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+header nav ul li {
+    padding: 0px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+}
+header nav ul li a.li {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+header nav ul li a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -7px;
+    background-color: #caa307;
+    width: 0%;
+    transition: 200ms;
+    height: 1px;
+}
+header nav ul li a:hover::before {
+    width: 100%;
+}
+header nav ul {
+    margin-right: 200px;
+}
+header nav .hamburger {
+    display: none;
+}
+header nav .hamburger .bar {
+    display: block;
+    height: 1.88px;
+    width: 32px;
+    background-color: #000;
+    margin: 6px 0px;
+    transition: all 0.3s ease-in-out;
+}
+header nav .hamburger .bar:nth-child(2) {
+    width: 20px;
+    margin-left: 11.5px;
+}
+header nav .searchNCart {
+    margin-left: 20px;
+    position: absolute;
+    right: 60px;
+    z-index: 10000;
+}
+header nav .searchNCart input {
+    position: fixed;
+    inset: 90px 0px;
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    display: none;
+    outline: 0;
+}
+header nav .searchNCart a {
+    margin: 0px 10px;
+    color: #000;
+    font-size: 27px;
+}
+header nav .searchNCart #closeBtn {
+    display: none;
+}
+header nav .searchNCart #searchIcon,
+header nav .searchNCart #closeBtn {
+    cursor: pointer;
+}
+header nav .searchNCart #searchIcon.active {
+    display: none;
+}
+header nav .searchNCart #closeBtn.active {
+    display: inline-block;
+}
+header nav .searchNCart input.active {
+    display: inline-block;
+}
+/* Navbar ends */
+
+
+
+/* Hero section starts */
+section.heroSection {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+section.heroSection img {
+    width: 100%;
+    max-height: 88vh;
+    min-height: 88vh;
+    object-fit: cover;
+    object-position: 75% 25%;
+}
+section.heroSection .textWrapper {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    font-family: "Raleway", sans-serif;
+    /* font-family: "Syne", sans-serif; */
+}
+section.heroSection .textWrapper h1 {
+    font-size: clamp(29px, 5vw, 10rem);
+    text-shadow: 0px 20px 50px rgba(0,0,0,0.6);
+    color: #ffffff;
+}
+section.heroSection .textWrapper p {
+    font-size: clamp(13px, 2vw, 1.2rem);
+    color: #ffffff;
+    max-width: 700px;
+    text-shadow: 0px 20px 50px rgba(0,0,0,0.6);
+    font-family: "Lato", sans-serif;
+}
+section.heroSection .textWrapper button {
+    width: 270px;
+    height: 75px;
+    margin-top: 10px;
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #ffffff;
+    letter-spacing: 2.9px;
+    transition: 400ms;
+}
+section.heroSection .textWrapper a button {
+    color: #000000;
+    text-decoration: none;
+}
+section.heroSection .textWrapper button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* hero Section starts */
+
+
+
+/* trendings Section starts */
+section.trendings {
+    height: 100%;
+    padding: 60px 50px;
+    font-family: "Raleway", sans-serif;
+}
+section.trendings a {
+    text-decoration: none;
+}
+section.trendings h2 {
+    margin-bottom: 20px;
+    font-size: clamp(25px, 2.3vw, 10rem);
+}
+section.trendings .card {
+    background-color: #eeeeee;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.2);
+    font-family: "Lato", sans-serif;
+}
+section.trendings .card .imageWrapper {
+    position: relative;
+    max-height: 390px;
+    overflow: hidden;
+}
+section.trendings .card .imageWrapper i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    color: #ffffff;
+    text-shadow: 0px 50px 100px rgba(0,0,0,0.5);
+}
+section.trendings .card img {
+    height: 390px;
+    object-fit: cover;
+    object-position: center 10%;
+    transition: 400ms;
+}
+section.trendings .card:hover img {
+    transform: scale(1.1);
+}
+section.trendings i {
+    color: #000;
+    font-size: 25px;
+}
+/* trendings Section ends */
+
+
+
+
+/* shopByCategory Section starts */
+section.shopByCategory {
+    height: 100%;
+    padding: 0px 50px;
+    font-family: "Raleway", sans-serif;
+}
+section.shopByCategory h1{
+    font-size: clamp(25px, 2.3vw, 10rem);
+    margin: 20px 0px;
+}
+section.shopByCategory h2{
+    font-size: clamp(14px, 2.3vw, 10rem);
+    color: #ffffff;
+}
+section.shopByCategory .itemWrapper {
+    padding: 30px 30px;
+    border-radius: 5px;
+    height: 100%;
+    /* min-height: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+section.shopByCategory .itemWrapper p {
+    max-width: 450px;
+    margin: 20px 0px;
+    color: #e3e3e3;
+    font-family: "Lato", sans-serif;
+}
+section.shopByCategory button {
+    width: 270px;
+    height: 75px;
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #ffffff;
+    letter-spacing: 2.9px;
+    transition: 400ms;
+    position: relative;
+    z-index: 10;
+}
+section.shopByCategory button a {
+    color: #000000;
+    text-decoration: none;
+}
+section.shopByCategory button:hover {
+    background-color: #000000;
+}
+section.shopByCategory button:hover a {
+    color: #ffffff;
+}
+/* shopByCategory Section ends */
+
+
+
+
+/* featured products Section starts */
+section.featuredProducts {
+    height: 100%;
+    padding: 60px 50px;
+    font-family: "Raleway", sans-serif;
+}
+section.featuredProducts h2 {
+    margin-bottom: 20px;
+    font-size: clamp(25px, 2.3vw, 10rem);
+}
+section.featuredProducts .card {
+    background-color: #eeeeee;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.2);
+    font-family: "Lato", sans-serif;
+}
+section.featuredProducts .card .imageWrapper {
+    position: relative;
+}
+section.featuredProducts .card .imageWrapper i {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    color: #ffffff;
+    text-shadow: 0px 50px 100px rgba(0,0,0,0.5);
+}
+section.featuredProducts .card img {
+    height: 390px;
+    object-fit: cover;
+    object-position: center 10%;
+}
+section.featuredProducts i {
+    color: #000;
+    font-size: 25px;
+}
+/* featured products Section ends */
+
+
+
+
+
+/* FOOTER STARTS HERE */
+footer {
+    padding: 100px 50px;
+    background-color: #181717;
+}
+.footerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.footerWrapper .logo {
+    font-family: "Bruno Ace", sans-serif;
+    color: #e2e2e2;
+}
+.footerWrapper h3 {
+    margin-bottom: 25px;
+    color: #e2e2e2;
+}
+.footerWrapper .helpItem> a,
+.footerWrapper .companyItem> a
+{
+    text-decoration: none;
+    color: #e2e2e2;
+    display: block;
+    font-family: "Lato", sans-serif;
+    margin: 6px 0px;
+    font-size: clamp(13px, 2vw, 1.2rem);
+}
+.footerWrapper i {
+    font-size: clamp(18px, 2vw, 1.5rem);
+    color: #e2e2e2;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /* Navbar */
+    header {
+        position: absolute;
+        z-index: 100;
+        background-color: #ffffff;
+        width: 100%;
+        height: 65px;
+    }
+    header nav {
+        height: 65px;
+        padding: 0px 20px;
+    }
+    header nav .logo {
+        margin-top: 12px;
+        z-index: 101;
+    }
+    header nav .hamburger {
+        display: block;
+        right: 20px;
+        z-index: 101;
+    }
+    header nav .navMenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transform: translateX(-100%);
+        margin-top: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 110vh;
+        transition: 200ms;
+    }
+    header nav .navMenu.active {
+        transform: translateX(0%);
+        background: #ffffff;
+        z-index: 99;
+        position: fixed;
+    }
+    header nav ul {
+        display: block;
+        margin: 0;
+    }
+    header nav ul li,
+    header nav .userData a,
+    header nav ul li a {
+        padding: 0;
+        text-transform: capitalize;
+        font-size: 22px;
+    }
+    header nav ul li {
+        padding-bottom: 20px;
+    }
+    header nav .hamburger .bar {
+        background-color: #000000;
+    }
+    header nav .hamburger.active {
+        position: fixed;
+        right: 20px;
+    }
+    header nav .logo.active {
+        position: fixed;
+    }
+    header nav .hamburger.active .bar {
+        transition: 400ms;
+    }
+    header nav .hamburger.active .bar:nth-child(1) {
+        transform: translateX(8px) translateY(6px) rotate(45deg);
+    }
+    header nav .hamburger.active .bar:nth-child(2) {
+        width: 32px;
+        transform: translateX(-4px) translateY(-1px) rotate(-45deg);
+    }
+    header nav .searchNCart input {
+        inset: 65px 0px;
+    }
+/* Navbar ends */
+}
+
+
+
+/* Navbar starts */
+@media (max-width: 768px) {
+/* Navbar starts */
+    header nav .logo {
+        margin-left: 0px;
+    }
+    header nav .searchNCart {
+        margin-left: 20px;
+        position: absolute;
+        right: 60px;
+        z-index: 10000;
+    }
+    header nav .searchNCart a {
+        margin: 0px 5px;
+        color: #000;
+        font-size: 21px;
+    }
+    header nav .searchNCart input {
+        top: 65px;
+        left: 0px;
+        width: 100%;
+        height: 50px;
+    }
+/* Navbar ends */
+
+/* Hero-section starts */
+    section.heroSection img {
+        max-height: 70vh;
+        min-height: 70vh;
+        object-position: 70% 25%;
+    }
+    section.heroSection .textWrapper {
+        left: 10px;
+        bottom: 20px;
+    }
+    section.heroSection .textWrapper h1 {
+        text-shadow: 0px 20px 50px rgba(0,0,0,1);
+    }
+    section.heroSection .textWrapper p {
+        max-width: 350px;
+        text-shadow: 0px 20px 50px rgba(0,0,0,1);
+    }
+    section.heroSection .textWrapper button {
+        width: 90%;
+        height: 55px;
+        margin-top: 0px;
+    }
+/* Hero-section ends */
+
+
+/* trendings section starts */
+    section.trendings {
+        height: 100%;
+        padding: 30px 0px;
+    }
+    section.trendings h2 {
+        margin-bottom: 10px;
+    }
+    section.trendings .card img {
+        height: 185px;
+        object-fit: cover;
+    }
+    section.trendings .card .card-title {
+        font-size: 13px;
+    }
+    section.trendings i {
+        font-size: 18px;
+    }
+    section.trendings .card-text {
+        font-size: 13px;
+    }
+    section.trendings .card .imageWrapper i {
+        right: 13px;
+        top: 10px;
+        font-size: 22px;
+        text-shadow: 0px 50px 100px rgba(0,0,0,0.5);
+    }
+/* trendings section ends */
+
+
+/* shopByCategory section starts */
+    section.shopByCategory {
+        padding: 0px 0px;
+    }
+section.shopByCategory h1{
+        margin: 0px 0px;
+    }
+    section.shopByCategory .itemWrapper {
+        padding: 30px 15px;
+    }
+    section.shopByCategory .itemWrapper p {
+        font-size: 13px;
+    }
+    section.shopByCategory button {
+        width: 100%;
+        height: 55px;
+    }
+/* shopByCategory section ends */
+
+
+/* featuredProducts section starts */
+    section.featuredProducts {
+        height: 100%;
+        padding: 30px 0px;
+    }
+    section.featuredProducts h2 {
+        margin-bottom: 10px;
+    }
+    section.featuredProducts .card img {
+        height: 185px;
+        object-fit: cover;
+    }
+    section.featuredProducts .card .card-title {
+        font-size: 13px;
+    }
+    section.featuredProducts i {
+        font-size: 18px;
+    }
+    section.featuredProducts .card-text {
+        font-size: 13px;
+    }
+    section.featuredProducts .card .imageWrapper i {
+        right: 13px;
+        top: 10px;
+        font-size: 22px;
+        text-shadow: 0px 50px 100px rgba(0,0,0,0.5);
+    }
+    /* featuredProducts section ends */
+
+
+/* FOOTER */
+    footer {
+        padding: 50px 0px;
+        background-color: #181717;
+    }
+    .footerWrapper h3 {
+        margin-bottom: 18px;
+    }
+    .footerWrapper .socialIcons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footerWrapper i {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    section.shopByCategory .itemWrapper {
+        padding: 30px 15px;
+    }
+    section.shopByCategory .itemWrapper p {
+        display: none;
+    }
+    section.shopByCategory button {
+        height: 40px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        border-radius: 2px;
+    }
+}

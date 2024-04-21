@@ -1,0 +1,419 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300..900&family=Sofia&family=Yellowtail&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+header {
+    height: 90px;
+    width: 100%;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 90px;
+    width: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+header nav .logo {
+    color: #000000;
+    font-family: "Bruno Ace", sans-serif;
+    margin-left: 60px;
+}
+header nav .navMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+}
+header nav ul {
+    display: flex;
+    margin: 0;
+    align-items: center;
+}
+header nav ul li {
+    padding: 0px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+}
+header nav ul li a.li {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+header nav ul li a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -7px;
+    background-color: #caa307;
+    width: 0%;
+    transition: 200ms;
+    height: 1px;
+}
+header nav ul li a:hover::before {
+    width: 100%;
+}
+header nav ul {
+    margin-right: 200px;
+}
+header nav .hamburger {
+    display: none;
+}
+header nav .hamburger .bar {
+    display: block;
+    height: 1.88px;
+    width: 32px;
+    background-color: #000;
+    margin: 6px 0px;
+    transition: all 0.3s ease-in-out;
+}
+header nav .hamburger .bar:nth-child(2) {
+    width: 20px;
+    margin-left: 11.5px;
+}
+header nav .searchNCart {
+    margin-left: 20px;
+    position: absolute;
+    right: 60px;
+    z-index: 10000;
+}
+header nav .searchNCart input {
+    position: fixed;
+    inset: 90px 0px;
+    z-index: 10;
+    width: 100%;
+    height: 50px;
+    display: none;
+    outline: 0;
+}
+header nav .searchNCart a {
+    margin: 0px 10px;
+    color: #000;
+    font-size: 27px;
+}
+header nav .searchNCart #closeBtn {
+    display: none;
+}
+header nav .searchNCart #searchIcon,
+header nav .searchNCart #closeBtn {
+    cursor: pointer;
+}
+header nav .searchNCart #searchIcon.active {
+    display: none;
+}
+header nav .searchNCart #closeBtn.active {
+    display: inline-block;
+}
+header nav .searchNCart input.active {
+    display: inline-block;
+}
+/* Navbar ends */
+
+
+
+/* cart Section starts */
+section.cart {
+    height: 100%;
+    padding: 50px 40px;
+    font-family: "Lato", sans-serif;
+}
+section.cart img {
+    height: 100%;
+    max-height: 330px;
+    width: 100%;
+    object-fit: cover;
+}
+section.cart h2 {
+    font-size: clamp(22px, 2.3vw, 10rem);
+}
+section.cart h5 {
+    font-size: clamp(14px, 1.5vw, 5rem);
+}
+section.cart h4 {
+    font-size: clamp(14px, 1.4vw, 1.7rem);
+}
+section.cart .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.cart .buttons button {
+    width: 120px;
+    height: 75px;
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    background-color: #d5d5d5;
+    color: #000000;
+    letter-spacing: 1px;
+    transition: 400ms;
+}
+section.cart .buttons button.removeBtn {
+    width: 270px;
+    height: 75px;
+}
+section.cart .buttons button.removeBtn:hover {
+    background-color: #8a2222;
+}
+section.cart .buttons button:hover {
+    background-color: rgb(123, 123, 123);
+}
+section.cart .buttons span {
+    font-size: clamp(14px, 2vw, 1.7rem);
+}
+section.cart .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+section.cart .rateWrapper, 
+section.cart .totalAmt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.cart h3 {
+    font-size: clamp(20px, 2.3vw, 10rem);
+}
+section.cart .checkoutBtn {
+    width: 100%;
+    height: 75px;
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    background-color: #d5d5d5;
+    color: #000000;
+    letter-spacing: 1px;
+    transition: 400ms;
+}
+/* cart Section ends */
+
+
+
+
+/* FOOTER STARTS HERE */
+footer {
+    padding: 100px 50px;
+    background-color: #181717;
+}
+.footerWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.footerWrapper .logo {
+    font-family: "Bruno Ace", sans-serif;
+    color: #e2e2e2;
+}
+.footerWrapper h3 {
+    margin-bottom: 25px;
+    color: #e2e2e2;
+}
+.footerWrapper .helpItem> a,
+.footerWrapper .companyItem> a
+{
+    text-decoration: none;
+    color: #e2e2e2;
+    display: block;
+    font-family: "Lato", sans-serif;
+    margin: 6px 0px;
+    font-size: clamp(13px, 2vw, 1.2rem);
+}
+.footerWrapper i {
+    font-size: clamp(18px, 2vw, 1.5rem);
+    color: #e2e2e2;
+    margin-right: 20px;
+}
+
+
+
+
+@media (max-width: 1200px) {
+/* Navbar */
+    header {
+        position: absolute;
+        z-index: 100;
+        background-color: #ffffff;
+        width: 100%;
+        height: 65px;
+    }
+    header nav {
+        height: 65px;
+        padding: 0px 20px;
+    }
+    header nav .logo {
+        margin-top: 12px;
+        z-index: 101;
+    }
+    header nav .hamburger {
+        display: block;
+        right: 20px;
+        z-index: 101;
+    }
+    header nav .navMenu {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transform: translateX(-100%);
+        margin-top: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 110vh;
+        transition: 200ms;
+    }
+    header nav .navMenu.active {
+        transform: translateX(0%);
+        background: #ffffff;
+        z-index: 99;
+        position: fixed;
+    }
+    header nav ul {
+        display: block;
+        margin: 0;
+    }
+    header nav ul li,
+    header nav .userData a,
+    header nav ul li a {
+        padding: 0;
+        text-transform: capitalize;
+        font-size: 22px;
+    }
+    header nav ul li {
+        padding-bottom: 20px;
+    }
+    header nav .hamburger .bar {
+        background-color: #000000;
+    }
+    header nav .hamburger.active {
+        position: fixed;
+        right: 20px;
+    }
+    header nav .logo.active {
+        position: fixed;
+    }
+    header nav .hamburger.active .bar {
+        transition: 400ms;
+    }
+    header nav .hamburger.active .bar:nth-child(1) {
+        transform: translateX(8px) translateY(6px) rotate(45deg);
+    }
+    header nav .hamburger.active .bar:nth-child(2) {
+        width: 32px;
+        transform: translateX(-4px) translateY(-1px) rotate(-45deg);
+    }
+    header nav .searchNCart input {
+        inset: 65px 0px;
+    }
+/* Navbar ends */
+
+    section.cart .buttons button {
+        width: 100px;
+        height: 55px;
+    }
+    section.cart .buttons button.removeBtn {
+        width: 220px;
+        height: 55px;
+    }
+    section.cart .checkoutBtn {
+        height: 55px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+/* Navbar starts */
+    header nav .logo {
+        margin-left: 0px;
+    }
+    header nav .searchNCart {
+        margin-left: 20px;
+        position: absolute;
+        right: 60px;
+        z-index: 10000;
+    }
+    header nav .searchNCart a {
+        margin: 0px 5px;
+        color: #000;
+        font-size: 21px;
+    }
+    header nav .searchNCart input {
+        top: 65px;
+        left: 0px;
+        width: 100%;
+        height: 50px;
+    }
+/* Navbar ends */
+
+
+    section.cart {
+        padding: 90px 0px 30px;
+    }
+    section.cart .buttons button {
+        width: 20px;
+        height: 35px;
+        border-radius: 10px;
+    }
+    section.cart .buttons button.removeBtn {
+        width: 100%;
+        height: 35px;
+        border-radius: 0px;
+        background-color: transparent;
+        color: #919191;
+        font-size: 13px;
+    }
+    section.cart .checkoutBtn {
+        height: 55px;
+        font-weight: 600;
+        border-radius: 5px;
+    }
+
+/* FOOTER */
+    footer {
+        padding: 50px 0px;
+        background-color: #181717;
+    }
+    .footerWrapper h3 {
+        margin-bottom: 18px;
+    }
+    .footerWrapper .socialIcons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footerWrapper i {
+        margin-right: 0px;
+    }
+}
